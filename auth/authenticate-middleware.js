@@ -11,7 +11,7 @@ module.exports = () => {
       const token = req.headers.authorization;
       const decode = jwt.verify(token, secrets.jwt);
 
-      req.id = decode.subject;
+      //req.id = decode.subject;
       next();
     } catch (err) {
       res.status(401).json({ you: 'shall not pass!' });
