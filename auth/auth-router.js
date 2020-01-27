@@ -29,6 +29,7 @@ router.post('/login', async (req, res) => {
   // implement login
   try {
     const { username, password } = req.body;
+
     const user = await authModel.findBy({ username }).first();
 
     const passwordValid = await bcrypt.compare(password, user.password);

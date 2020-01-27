@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon -r dotenv/config index.js",
-    "test": "jest --verbose --watch"
+    "test": "cross-env jest NODE_ENV=test --verbose --watch"
   },
   "repository": {
     "type": "git",
