@@ -5,8 +5,9 @@ const db = require('../database/dbConfig');
 //const bcrypt = require('bcryptjs');
 
 beforeEach(async () => {
-  await db.seed.run();
+  db.seed.run();
 });
+
 describe('auth router', () => {
   test('register a user', async () => {
     const res = await supertest(server)
